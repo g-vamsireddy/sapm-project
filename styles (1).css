@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: white;
+}
+
+.dark-theme {
+    height: 100vh;
+}
+
+.title {
+    font-size: 2rem;
+    color: #ffa500;
+}
+
+.subtitle {
+    color: #cccccc;
+}
+
+.card {
+    background-color: #1e1e1e;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.day {
+    font-weight: bold;
+    color: #ffa500;
+}
+
+.date {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #232526;
+    color: #fff;
+}
+
+.today {
+    background-color: #ffa500;
+    color: black;
+}
+
+.highlight {
+    background-color: #ff5733;
+    color: white;
+}
+
+.email-card {
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.email-card:hover {
+    background-color: #444;
+}

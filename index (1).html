@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager UI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container-fluid p-5 dark-theme">
+        <!-- Login Section -->
+        <div id="login-container" class="text-center">
+            <h1 class="title mb-4">🌌 TaskMinder AI</h1>
+            <div class="card login-card mx-auto p-4">
+                <h3>Login</h3>
+                <form id="login-form">
+                    <div class="mb-3">
+                        <input type="email" id="email" class="form-control" placeholder="Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" id="password" class="form-control" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboard-container" class="d-none">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h1 class="title">🚀 Welcome to TaskMinder AI</h1>
+                    <p class="subtitle">Your tasks, prioritized and visualized beautifully.</p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <button class="btn btn-primary w-100 p-4" data-bs-toggle="modal" data-bs-target="#calendarModal">
+                        📅 Open Calendar
+                    </button>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <button class="btn btn-secondary w-100 p-4" data-bs-toggle="modal" data-bs-target="#emailModal">
+                        📧 Open Emails
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calendar Modal -->
+    <div class="modal fade" id="calendarModal" tabindex="-1" aria-labelledby="calendarModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="calendarModalLabel">📅 Calendar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">October 2023</h3>
+                    <!-- Calendar Grid -->
+                    <div class="calendar mb-3">
+                        <div class="day">Sun</div>
+                        <div class="day">Mon</div>
+                        <div class="day">Tue</div>
+                        <div class="day">Wed</div>
+                        <div class="day">Thu</div>
+                        <div class="day">Fri</div>
+                        <div class="day">Sat</div>
+                        <div class="date">1</div>
+                        <div class="date">2</div>
+                        <div class="date">3</div>
+                        <div class="date">4</div>
+                        <div class="date today">5</div>
+                        <div class="date">6</div>
+                        <div class="date">7</div>
+                        <div class="date highlight">8</div>
+                        <div class="date">9</div>
+                        <div class="date">10</div>
+                        <div class="date highlight">11</div>
+                    </div>
+                    <!-- Task Table -->
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Task</th>
+                                <th>Deadline</th>
+                                <th>Priority</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Project Report</td>
+                                <td>2023-10-05</td>
+                                <td>High</td>
+                            </tr>
+                            <tr>
+                                <td>Team Meeting</td>
+                                <td>2023-10-08</td>
+                                <td>Medium</td>
+                            </tr>
+                            <tr>
+                                <td>Code Review</td>
+                                <td>2023-10-11</td>
+                                <td>Low</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Email Modal -->
+    <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="emailModalLabel">📧 Emails</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Inbox</h3>
+                    <!-- Email List -->
+                    <div class="email-list">
+                        <div class="email-card">🧑‍💼 <strong>John Doe</strong> <br> Meeting Reminder - 3 PM</div>
+                        <div class="email-card">📅 <strong>Project Deadline</strong> <br> Due Tomorrow</div>
+                        <div class="email-card">💬 <strong>Follow-Up Tasks</strong> <br> Pending Review</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
